@@ -17,8 +17,8 @@ namespace DesignPatternsSamples.Infra.Repository.Detran.Tests
                 .AddTransient<DetranPEVerificadorDebitosRepository>()
                 .AddTransient<DetranSPVerificadorDebitosRepository>()
                 .AddTransient<DetranRJVerificadorDebitosRepository>()
+                .AddTransient<DetranMGVerificadorDebitosRepository>()
                 .AddTransient<DetranRSVerificadorDebitosRepository>()
-                .AddTransient<DetranBAVerificadorDebitosRepository>()
                 .AddSingleton<IDetranVerificadorDebitosFactory, DetranVerificadorDebitosFactory>();
 
             #region IConfiguration
@@ -37,8 +37,8 @@ namespace DesignPatternsSamples.Infra.Repository.Detran.Tests
                 .Register("PE", typeof(DetranPEVerificadorDebitosRepository))
                 .Register("RJ", typeof(DetranRJVerificadorDebitosRepository))
                 .Register("SP", typeof(DetranSPVerificadorDebitosRepository))
-                .Register("RS", typeof(DetranRSVerificadorDebitosRepository))
-                .Register("BA", typeof(DetranBAVerificadorDebitosRepository));
+                .Register("MG", typeof(DetranSPVerificadorDebitosRepository))
+                .Register("RS", typeof(DetranRSVerificadorDebitosRepository));
         }
     }
 }

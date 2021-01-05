@@ -20,8 +20,8 @@ namespace DesignPatternsSamples.Infra.Repository.Detran.Tests
         [InlineData("PE", typeof(DetranPEVerificadorDebitosRepository))]
         [InlineData("SP", typeof(DetranSPVerificadorDebitosRepository))]
         [InlineData("RJ", typeof(DetranRJVerificadorDebitosRepository))]
+        [InlineData("MG", typeof(DetranRJVerificadorDebitosRepository))]
         [InlineData("RS", typeof(DetranRSVerificadorDebitosRepository))]
-        [InlineData("BA", typeof(DetranBAVerificadorDebitosRepository))]
         public void InstanciarServicoPorUFRegistrado(string uf, Type implementacao)
         {
             var resultado = _Factory.Create(uf);
